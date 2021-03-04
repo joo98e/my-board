@@ -1,0 +1,59 @@
+echo "# my-board" >> README.md
+git init
+git add README.md
+git config --global core.autocrlf true
+
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/joo98e/my-board.git
+git push -u origin main
+
+@@@@@@@@@@@@@@@@@
+
+node installed
+
+node -v
+
+npm install -g create-react-app
+
+
+create-react-app 'title'
+
+@@@@@@@@@@@@@@ 설치 패키지
+
+devfront 7880
+devback 6880
+
+front 7878
+back 6868
+
+db 3307
+
+netstat -tnl
+t : tcp 
+n : numeric(10진수)
+l : listening
+
+pm2 list
+pm2 serve build ${port}(7878 등)
+
+로컬 개발시 터미널로 열기 7880
+npm run start
+
+
+sudo > super do
+
+sudo npm install pm2
+sudo npm install yarn
+sudo npm install forever
+sudo npm install express
+
+nginx 사용시
+https://hololo-kumo.tistory.com/147
+https://valuefactory.tistory.com/165
+https://valuefactory.tistory.com/165
+https://uhou.tistory.com/170
+https://blog.naver.com/dilrong/221497936351
+
+
+
