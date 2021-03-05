@@ -18,14 +18,14 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  color1 : {
-    color : '#fdf205'
+  color1: {
+    color: '#fdf205'
   },
-  color2 : {
-    color : '#f55354'
+  color2: {
+    color: '#f55354'
   },
-  color3 : {
-    color : '#f31bf3'
+  color3: {
+    color: '#f31bf3'
   },
 }));
 
@@ -34,7 +34,7 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{background : '#5d4370'}}>
+      <AppBar position="static" style={{ background: '#5d4370' }}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
@@ -43,6 +43,7 @@ export default function ButtonAppBar() {
             <span className={classes.color1}>Mirim</span>
             <span className={classes.color2}>Media</span>
             <span className={classes.color3}>Lab</span>
+
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
