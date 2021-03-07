@@ -1,3 +1,7 @@
+// IE
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
+
 // react modules
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -38,7 +42,7 @@ ReactDOM.render(
 
       {/* 404 */}
       <Route path="/">
-        <h1>페이지 없음</h1>
+        <h1>Not found</h1>
       </Route>
 
     </Switch>
