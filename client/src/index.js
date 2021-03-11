@@ -13,6 +13,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // components
 import Nav from './components/Nav';
 import Home from './components/Home';
+import Board from './components/Board';
 
 // bootstrap, (i))
 import 'bootstrap/dist/css/bootstrap.css';
@@ -38,6 +39,11 @@ ReactDOM.render(
       {/* Main */}
       <Route path="/main">
 
+      </Route>
+
+      {/* Board */}
+      <Route path="/board">
+        <Board />
       </Route>
 
       {/* 404 */}

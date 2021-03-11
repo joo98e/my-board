@@ -10,6 +10,51 @@
 > back 6868
 > ```
 
+### 참고
+> 블로그(리액트 게시판)
+> http://blog.naver.com/PostView.nhn?blogId=sejun3278&logNo=221873300911&redirect=Dlog&widgetTypeCall=true&directAccess=false
+> 블로그(리액트 게시판)
+> http://blog.naver.com/PostView.nhn?blogId=sejun3278&logNo=221575009683&parentCategoryNo=&categoryNo=11&viewDate=&isShowPopularPosts=false&from=postView
+> 플렉스, 그리드
+> https://studiomeal.com/archives/197
+
+### SQL 반복문(프로시저를 생성하고, 그 안에서 변수를 선언하며 할당하고 실행문을 반복한다.)
+```
+-- DB 선택
+USE myboard;
+-- 구분 기호 설정
+DELIMITER $$
+-- 프로시저 있을 경우 삭제
+DROP PROCEDURE IF EXISTS myProc;
+-- 프로시저 생성
+CREATE PROCEDURE myProc()
+-- 시작
+BEGIN
+	DECLARE i INT DEFAULT 1; -- 변수할당
+    WHILE (i < 30) DO -- 와일 시작
+    INSERT INTO myboard.board(
+		writer,
+        title,
+        content,
+        hits
+    ) VALUES (
+		concat('글쓴이_', i),
+        concat('글제목_', i),
+        concat('글내용_', i),
+        i
+    );
+    SET i = i + 1; -- i 증가
+    END WHILE; -- 와일 끝
+END $$ -- 딜리미터 끝
+DELIMITER ; -- 구분 기호 변경
+
+-- 이 후, 프로시저 콜
+CALL myProc();
+SELECT * FROM board;
+
+```
+
+
 ### my-board
 This repository for the project of "my-board".
 
